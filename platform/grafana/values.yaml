@@ -31,3 +31,4 @@ grafana:
       auth_url: https://dex.epx.pub/auth
       token_url: https://dex.epx.pub/token
       api_url: https://dex.epx.pub/userinfo
+      skip_org_role_sync: true

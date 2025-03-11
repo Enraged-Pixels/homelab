@@ -174,3 +174,9 @@ app-template:
             - Cisco Office:
               - href: https://192.168.1.32/cs55ffa354
                 icon: cisco.svg
+            - LowerBlade Office:
+              - href: https://192.168.1.24
+                icon: ubuntu-linux-alt.svg
+            - TrueNAS (future UpperBlade Office)
+              - href: https://192.168.1.23:444
+                icon: truenas-scale.svg

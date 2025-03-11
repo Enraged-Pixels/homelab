@@ -51,11 +51,11 @@ app-template:
       data:
         settings.yaml: >
           background:
-          https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/99cfcd38-3e07-4848-9e36-1a5130a822c9/d35.jpg?format=2500w
+          https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/bcd3d37f-3a4b-482a-8fc8-c197aece48c2/sil29.jpg?format=2500w
 
           cardBlur: md
 
-          theme: light
+          theme: dark
 
           headerStyle: boxed
 

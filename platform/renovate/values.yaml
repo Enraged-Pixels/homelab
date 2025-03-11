@@ -6,7 +6,7 @@ renovate:
       {
         "platform": "gitea",
         "endpoint": "https://git.epx.pub/api/v1",
-        "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+        "gitAuthor": "Renovate <info+1@epx.pub>",
         "autodiscover": true
       }
   existingSecret: renovate-secret

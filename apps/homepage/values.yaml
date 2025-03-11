@@ -56,7 +56,9 @@ app-template:
           hideVersion: true
         widgets.yaml: |
           - search:
-              provider: google
+              provider: custom
+              url: https://search.epx.pub/search?q=%s
+              focus: true
               target: _blank
         services.yaml: |
           - Popular:
@@ -129,7 +131,7 @@ app-template:
                 icon: openspeedtest.png
         bookmarks.yaml: |
           - Homelab:
-            - Documentation:
+            - Documentation (broken):
               - href: https://homelab.epx.pub
                 icon: google-docs.svg
             - Public homelab repository:
@@ -149,9 +151,3 @@ app-template:
             - Proxmox:
               - href: https://proxmox:8006
                 icon: proxmox.svg
-            - Google Cloud:
-              - href: https://console.cloud.google.com
-                icon: google-cloud-platform.svg
-            - Oracle Cloud:
-              - href: https://cloud.oracle.com
-                icon: oracle-cloud.svg

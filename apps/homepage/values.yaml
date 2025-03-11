@@ -2,6 +2,8 @@
 app-template:
   controllers:
     main:
+      annotations:
+        checksum/config: ${sha256sum:configMaps/config/data}
       containers:
         main:
           image:

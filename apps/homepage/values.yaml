@@ -145,8 +145,8 @@ app-template:
               - href: https://app.terraform.io
                 icon: terraform.svg
           - Infrastructure:
-            - Router:
-              - href: https://192.168.1.1
+            - Unifi Cloud:
+              - href: https://192.168.1.8
                 icon: router.svg
             - Proxmox:
               - href: https://proxmox:8006

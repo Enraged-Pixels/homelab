@@ -125,7 +125,7 @@ app-template:
             - ArgoCD:
                 href: https://argocd.epx.pub
                 description: Continuous deployment
-                icon: argocd.svg
+                icon: argo-cd.svg
             - Registry:
                 href: https://registry.epx.pub
                 description: Container registry

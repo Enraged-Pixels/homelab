@@ -60,6 +60,8 @@ app-template:
           headerStyle: boxed
 
           hideVersion: true
+
+          favicon: https://search.epx.pub/static/themes/simple/img/favicon.png
         widgets.yaml: |
           - search:
               provider: custom

@@ -28,6 +28,5 @@ resource "kubernetes_secret" "renovate_secret" {
   data = {
     RENOVATE_TOKEN = var.renovate_token
   }
-  force = true
 
 }

@@ -135,6 +135,9 @@ app-template:
               - href: https://homelab.epx.pub
                 icon: google-docs.svg
             - Public homelab repository:
+              - href: https://git.epx.pub/NordWest/homelab/
+                icon: gitea.svg
+            - Public homelab repository:
               - href: https://github.com/khuedoan/homelab
                 icon: github.svg
           - Managed services:
@@ -148,6 +151,6 @@ app-template:
             - Unifi Cloud:
               - href: https://192.168.1.8
                 icon: router.svg
-            - Proxmox:
-              - href: https://proxmox:8006
-                icon: proxmox.svg
+            - USP
+              - href: https://192.168.1.35/
+                icon: power.svg

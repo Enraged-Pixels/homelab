@@ -54,7 +54,7 @@ app-template:
           https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/3ea4aaf5-efa7-451c-a99e-836b3104212e/l12.jpg?format=2500w
 
           cardBlur: lg
-
+          color: violet
           theme: dark
 
           headerStyle: boxed

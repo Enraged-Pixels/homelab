@@ -177,6 +177,6 @@ app-template:
             - LowerBlade Office:
               - href: https://192.168.1.24
                 icon: ubuntu-linux-alt.svg
-            - TrueNAS (future UpperBlade Office)
+            - TrueNAS (future UpperBlade Office):
               - href: https://192.168.1.23:444
                 icon: truenas-scale.svg

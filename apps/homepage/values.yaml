@@ -165,7 +165,7 @@ app-template:
             - Unifi Cloud:
               - href: https://192.168.1.8
                 icon: router.svg
-            - USP:
+            - UPS:
               - href: https://192.168.1.35
                 icon: ups.svg
             - Cisco Flur:
@@ -175,7 +175,7 @@ app-template:
               - href: https://192.168.1.32/cs55ffa354
                 icon: cisco.svg
             - LowerBlade Office:
-              - href: https://192.168.1.24
+              - href: https://192.168.1.24:9090
                 icon: ubuntu-linux.svg
             - TrueNAS (future UpperBlade Office):
               - href: https://192.168.1.23:444

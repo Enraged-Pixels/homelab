@@ -158,6 +158,9 @@ app-template:
             - Cloudflare:
               - href: https://dash.cloudflare.com
                 icon: cloudflare.svg
+            - Zero Trust:
+              - href: https://one.dash.cloudflare.com
+                icon: cloudflare-zero-trust.svg
             - Terraform Cloud:
               - href: https://app.terraform.io
                 icon: terraform.svg

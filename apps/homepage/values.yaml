@@ -50,6 +50,8 @@ app-template:
       enabled: true
       data:
         settings.yaml: >
+          title: EPX Home
+
           background:
           https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/bcd3d37f-3a4b-482a-8fc8-c197aece48c2/sil29.jpg?format=2500w
 
@@ -60,6 +62,8 @@ app-template:
           headerStyle: boxed
 
           hideVersion: true
+
+          favicon: https://search.epx.pub/static/themes/simple/img/favicon.png
         widgets.yaml: |
           - search:
               provider: custom
@@ -121,7 +125,7 @@ app-template:
             - ArgoCD:
                 href: https://argocd.epx.pub
                 description: Continuous deployment
-                icon: argocd.svg
+                icon: argo-cd.svg
             - Registry:
                 href: https://registry.epx.pub
                 description: Container registry
@@ -144,7 +148,7 @@ app-template:
             - Documentation (broken):
               - href: https://homelab.epx.pub
                 icon: google-docs.svg
-            - Public homelab repository:
+            - NordWest homelab repository:
               - href: https://git.epx.pub/NordWest/homelab/
                 icon: gitea.svg
             - Public homelab repository:
@@ -161,7 +165,7 @@ app-template:
             - Unifi Cloud:
               - href: https://192.168.1.8
                 icon: router.svg
-            - USP:
+            - UPS:
               - href: https://192.168.1.35
                 icon: ups.svg
             - Cisco Flur:
@@ -170,3 +174,12 @@ app-template:
             - Cisco Office:
               - href: https://192.168.1.32/cs55ffa354
                 icon: cisco.svg
+            - LowerBlade Office:
+              - href: https://192.168.1.24:9090
+                icon: ubuntu-linux.svg
+            - LowerBlade Office S3:
+              -herf: http://192.168.1.24:9001
+                icon: minio.svg
+            - TrueNAS (future UpperBlade Office):
+              - href: https://192.168.1.23:444
+                icon: truenas-scale.svg

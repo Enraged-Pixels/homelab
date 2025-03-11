@@ -30,10 +30,29 @@ post-install:
 backup:
 	./scripts/backup --action setup --namespace=actualbudget --pvc=actualbudget-data
 	./scripts/backup --action setup --namespace=jellyfin --pvc=jellyfin-data
+	./scripts/backup --action setup --namespace=gitea --pvc=gitea-shared-storage
+	./scripts/backup --action setup --namespace=kanidm --pvc=data-kanidm-0
+	./scripts/backup --action setup --namespace=matrix --pvc=data-matrix-postgresql-0
+	./scripts/backup --action setup --namespace=matrix --pvc=matrix-dendrite-jetstream-pvc
+	./scripts/backup --action setup --namespace=matrix --pvc=matrix-dendrite-media-pvc
+	./scripts/backup --action setup --namespace=matrix --pvc=matrix-dendrite-search-pvc
+	./scripts/backup --action setup --namespace=paperless --pvc=paperless-data
+	./scripts/backup --action setup --namespace=ollama --pvc=ollama-data
+	./scripts/backup --action setup --namespace=zot --pvc=zot-data
+
 
 restore:
 	./scripts/backup --action restore --namespace=actualbudget --pvc=actualbudget-data
 	./scripts/backup --action restore --namespace=jellyfin --pvc=jellyfin-data
+	./scripts/backup --action restore --namespace=gitea --pvc=gitea-shared-storage
+	./scripts/backup --action restore --namespace=kanidm --pvc=data-kanidm-0
+	./scripts/backup --action restore --namespace=matrix --pvc=data-matrix-postgresql-0
+	./scripts/backup --action restore --namespace=matrix --pvc=matrix-dendrite-jetstream-pvc
+	./scripts/backup --action restore --namespace=matrix --pvc=matrix-dendrite-media-pvc
+	./scripts/backup --action restore --namespace=matrix --pvc=matrix-dendrite-search-pvc
+	./scripts/backup --action restore --namespace=paperless --pvc=paperless-data
+	./scripts/backup --action restore --namespace=ollama --pvc=ollama-data
+	./scripts/backup --action restore --namespace=zot --pvc=zot-data
 
 test:
 	make -C test

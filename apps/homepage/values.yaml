@@ -2,8 +2,6 @@
 app-template:
   controllers:
     main:
-      annotations:
-        version: 1.0
       containers:
         main:
           image:

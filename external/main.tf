@@ -15,9 +15,9 @@ module "extra_secrets" {
   data   = var.extra_secrets
 }
 
-resource "kubernetes_secret" "renovate_secret2" {
+resource "kubernetes_secret" "renovate_secret" {
   metadata {
-    name      = "renovate-secret2"
+    name      = "renovate-secret"
     namespace = "renovate"
 
     annotations = {

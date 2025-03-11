@@ -152,5 +152,5 @@ app-template:
               - href: https://192.168.1.8
                 icon: router.svg
             - USP
-              - href: https://192.168.1.35/
-                icon: power.svg
+              - href: https://192.168.1.35
+                icon: ups.svg

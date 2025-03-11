@@ -57,7 +57,7 @@ app-template:
         widgets.yaml: |
           - search:
               provider: custom
-              url: https://search.epx.pub/search?q=%s
+              url: https://search.epx.pub/search?q=
               focus: true
               target: _blank
         services.yaml: |

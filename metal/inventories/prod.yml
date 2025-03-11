@@ -10,5 +10,5 @@ metal:
         metal0: {ansible_host: 192.168.1.50, mac: '00:15:5d:b2:15:06', disk: sda, network_interface: eth0}
         metal1: {ansible_host: 192.168.1.51, mac: '00:15:5d:b2:15:07', disk: sda, network_interface: eth0}
         metal2: {ansible_host: 192.168.1.52, mac: '00:15:5d:b2:15:08', disk: sda, network_interface: eth0}
-        controller-lower1: {ansible_host: 192.168.1.53, mac: '52:54:00:9a:74:79', disk: sda, network_interface: eth0}
+        controller-lower1: {ansible_host: 192.168.1.57, mac: '52:54:00:9a:74:79', disk: sda, network_interface: eth0}
         controller-laptop1: {ansible_host: 192.168.1.56, mac: '00:15:5d:b2:15:0a', disk: sda, network_interface: eth0}

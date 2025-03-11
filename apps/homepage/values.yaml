@@ -154,3 +154,9 @@ app-template:
             - USP
               - href: https://192.168.1.35
                 icon: ups.svg
+            - Cisco Flur
+              - href: https://192.168.1.6/cs50672d0a
+                icon: cisco.svg
+            - Cisco Office
+              - href: https://192.168.1.32/cs55ffa354
+                icon: cisco.svg

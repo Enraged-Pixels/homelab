@@ -9,4 +9,4 @@ renovate:
         "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
         "autodiscover": true
       }
-  existingSecret: renovate-secret
+  existingSecret: renovate-secret2

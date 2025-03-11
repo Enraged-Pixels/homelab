@@ -51,7 +51,7 @@ app-template:
       data:
         settings.yaml: >
           background:
-          https://images.unsplash.com/photo-1502790671504-542ad42d5189?auto=format&fit=crop&w=2560&q=80
+          https://images.squarespace-cdn.com/content/v1/673776e8f55fd72f60813df1/d006097d-c23c-4d00-88f2-f2aeb10e388b/l08.jpg
 
           cardBlur: md
 

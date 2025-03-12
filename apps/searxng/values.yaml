@@ -30,7 +30,7 @@ app-template:
         external-dns.alpha.kubernetes.io/target: "searxng.epx.pub"
         external-dns.alpha.kubernetes.io/cloudflare-proxied: "true"
       hosts:
-        - host: &host search.epx.pub
+        - host: &host searxng.epx.pub
           paths:
             - path: /
               pathType: Prefix

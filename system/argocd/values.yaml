@@ -35,7 +35,7 @@ argocd-apps:
       namespace: argocd
       generators:
         - git:
-            repoURL: &repoURL http://gitea-http.gitea:3000/NordWest/homelab
+            repoURL: &repoURL https://github.com/Enraged-Pixels/homelab
             revision: &revision master
             directories:
               - path: system/*
@@ -43,15 +43,15 @@ argocd-apps:
               - path: apps/*
       template:
         metadata:
-          name: '{{path.basename}}'
+          name: "{{path.basename}}"
         spec:
           destination:
             name: in-cluster
-            namespace: '{{path.basename}}'
-          project: default  # TODO
+            namespace: "{{path.basename}}"
+          project: default # TODO
           source:
             repoURL: *repoURL
-            path: '{{path}}'
+            path: "{{path}}"
             targetRevision: *revision
           syncPolicy:
             automated:

@@ -26,9 +26,3 @@ variable "extra_secrets" {
   sensitive   = true
   default     = {}
 }
-
-variable "renovate_token" {
-  type        = string
-  description = "Token for Renovate to access Gitea"
-  sensitive   = true
-}

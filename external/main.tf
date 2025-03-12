@@ -14,19 +14,3 @@ module "extra_secrets" {
   source = "./modules/extra-secrets"
   data   = var.extra_secrets
 }
-
-resource "kubernetes_secret" "renovate_secret" {
-  metadata {
-    name      = "renovate-secret"
-    namespace = "renovate"
-
-    annotations = {
-      "app.kubernetes.io/managed-by" = "Terraform"
-    }
-  }
-
-  data = {
-    RENOVATE_TOKEN = var.renovate_token
-  }
-
-}

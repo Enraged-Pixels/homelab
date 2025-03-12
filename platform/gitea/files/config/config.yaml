@@ -2,28 +2,5 @@
 users:
   - name: renovate
     fullName: Renovate
-    email: bot@renovateapp.com
-organizations:
-  - name: ops
-    description: Operations
-    teams:
-      - name: Owners
-        members:
-          - renovate
-repositories:
-  - name: homelab
-    owner: ops
-    private: false
-    migrate:
-      source: https://github.com/Enraged-Pixels/homelab
-      mirror: false
-  - name: blog
-    owner: khuedoan
-    migrate:
-      source: https://github.com/khuedoan/blog
-      mirror: true
-  - name: backstage
-    owner: khuedoan
-    migrate:
-      source: https://github.com/khuedoan/backstage
-      mirror: true
+    email: info+1@epx.pub
+    tokenSecretRef: renovate-secret

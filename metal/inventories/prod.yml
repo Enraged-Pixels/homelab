@@ -7,8 +7,47 @@ metal:
   children:
     masters:
       hosts:
-        metal0: {ansible_host: 192.168.1.50, mac: '00:15:5d:b2:15:06', disk: sda, network_interface: eth0}
-        metal1: {ansible_host: 192.168.1.51, mac: '00:15:5d:b2:15:07', disk: sda, network_interface: eth0}
-        metal2: {ansible_host: 192.168.1.52, mac: '00:15:5d:b2:15:08', disk: sda, network_interface: eth0}
-        controller-lower1: {ansible_host: 192.168.1.58, mac: '52:54:00:ab:c6:21', disk: vda, network_interface: net0}
-        controller-laptop1: {ansible_host: 192.168.1.56, mac: '00:15:5d:b2:15:0a', disk: sda, network_interface: eth0}
+        laptop-master1:
+          {
+            ansible_host: 192.168.1.110,
+            mac: "00:23:24:d1:f5:69",
+            disk: sda,
+            network_interface: eth0,
+          }
+        laptop-master2:
+          {
+            ansible_host: 192.168.1.111,
+            mac: "00:23:24:d1:f3:f0",
+            disk: sda,
+            network_interface: eth0,
+          }
+        tower-master1:
+          {
+            ansible_host: 192.168.1.112,
+            mac: "00:23:24:e7:04:60",
+            disk: sda,
+            network_interface: eth0,
+          }
+      workers:
+        hosts:
+          laptop-worker1:
+            {
+              ansible_host: 192.168.1.120,
+              mac: "00:23:24:d1:f4:d6",
+              disk: sda,
+              network_interface: eth0,
+            }
+          laptop-worker2:
+            {
+              ansible_host: 192.168.1.121,
+              mac: "00:23:24:d1:f4:d6",
+              disk: sda,
+              network_interface: eth0,
+            }
+          laptop-worker3:
+            {
+              ansible_host: 192.168.1.122,
+              mac: "00:23:24:d1:f4:d6",
+              disk: sda,
+              network_interface: eth0,
+            }

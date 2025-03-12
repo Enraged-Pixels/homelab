@@ -1,6 +1,6 @@
 # TODO create user and access token
-users:
-  - name: renovate
-    fullName: Renovate
-    email: info+1@epx.pub
-    tokenSecretRef: renovate-secret
+# users:
+#   - name: renovate
+#     fullName: Renovate
+#     email: info+1@epx.pub
+#     tokenSecretRef: renovate-secret

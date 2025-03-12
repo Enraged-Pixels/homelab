@@ -1,12 +1,12 @@
 renovate:
   cronjob:
-    schedule: '0 9 * * *'  # Everyday at 09:00
+    schedule: "0 9 * * *" # Everyday at 09:00
   renovate:
     config: |
       {
         "platform": "gitea",
         "endpoint": "https://git.epx.pub/api/v1",
-        "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+        "gitAuthor": "EPX Renovate",
         "autodiscover": true
       }
   existingSecret: renovate-secret

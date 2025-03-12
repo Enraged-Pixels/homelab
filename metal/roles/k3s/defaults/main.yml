@@ -16,3 +16,5 @@ k3s_server_config:
   disable-network-policy: true
   flannel-backend: none
   secrets-encryption: true
+  node-taint:
+    - "node-role.kubernetes.io/control-plane:NoSchedule"

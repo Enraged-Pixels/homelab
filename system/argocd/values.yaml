@@ -35,7 +35,7 @@ argocd-apps:
       namespace: argocd
       generators:
         - git:
-            repoURL: &repoURL https://github.com/Enraged-Pixels/homelab
+            repoURL: &repoURL http://gitea-http.gitea:3000/ops/homelab
             revision: &revision master
             directories:
               - path: system/*

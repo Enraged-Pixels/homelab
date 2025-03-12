@@ -28,26 +28,26 @@ metal:
             disk: sda,
             network_interface: eth0,
           }
-      workers:
-        hosts:
-          laptop-worker1:
-            {
-              ansible_host: 192.168.1.120,
-              mac: "00:15:5d:b2:15:0e",
-              disk: sda,
-              network_interface: eth0,
-            }
-          laptop-worker2:
-            {
-              ansible_host: 192.168.1.121,
-              mac: "00:15:5d:b2:15:0f",
-              disk: sda,
-              network_interface: eth0,
-            }
-          laptop-worker3:
-            {
-              ansible_host: 192.168.1.122,
-              mac: "00:15:5d:b2:15:10",
-              disk: sda,
-              network_interface: eth0,
-            }
+    workers:
+      hosts:
+        laptop-worker1:
+          {
+            ansible_host: 192.168.1.120,
+            mac: "00:15:5d:b2:15:0e",
+            disk: sda,
+            network_interface: eth0,
+          }
+        laptop-worker2:
+          {
+            ansible_host: 192.168.1.121,
+            mac: "00:15:5d:b2:15:0f",
+            disk: sda,
+            network_interface: eth0,
+          }
+        laptop-worker3:
+          {
+            ansible_host: 192.168.1.122,
+            mac: "00:15:5d:b2:15:10",
+            disk: sda,
+            network_interface: eth0,
+          }

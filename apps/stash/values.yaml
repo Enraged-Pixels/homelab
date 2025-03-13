@@ -1,0 +1,87 @@
+app-template:
+  defaultPodOptions:
+    securityContext:
+      fsGroup: 1000
+  controllers:
+    main:
+      containers:
+        stash:
+          image:
+            repository: stashapp/stash
+            tag: latest
+          env:
+            STASH_STASH: /data
+            STASH_GENERATED: /generated
+            STASH_METADATA: /metadata
+            STASH_CACHE: /cache
+            STASH_PORT: 9999
+        transmission:
+          image:
+            repository: lscr.io/linuxserver/transmission
+            tag: latest
+          env:
+            PUID: 1000
+            PGID: 1000
+            TZ: Europe/Berlin
+            TRANSMISSION_WEB_HOME: /combustion-release/
+  service:
+    main:
+      ports:
+        stash:
+          port: 9999
+          protocol: HTTP
+        transmission:
+          port: 9091
+          protocol: HTTP
+  ingress:
+    main:
+      enabled: true
+      className: nginx
+      annotations:
+        cert-manager.io/cluster-issuer: letsencrypt-prod
+      hosts:
+        - host: &stashHost stash.epx.pub
+          paths:
+            - path: /
+              pathType: Prefix
+              service:
+                name: main
+                port: stash
+        - host: &transmissionHost transmission-stash.epx.pub
+          paths:
+            - path: /
+              pathType: Prefix
+              service:
+                name: main
+                port: transmission
+      tls:
+        - secretName: stash-tls-certificate
+          hosts:
+            - *stashHost
+            - *transmissionHost
+  persistence:
+    data:
+      enabled: true
+      storageClass: zfs-nfs
+      accessMode: ReadWriteMany
+      size: 1000Gi
+      advancedMounts:
+        main:
+          stash:
+            - path: /data
+              subPath: stash/data
+            - path: /metadata
+              subPath: stash/metadata
+            - path: /generated
+              subPath: stash/generated
+            - path: /cache
+              subPath: stash/cache
+            - path: /downloads
+              subPath: stash/downloads
+          transmission:
+            - path: /config
+              subPath: stash/transmission/config
+            - path: /downloads
+              subPath: stash/downloads
+            - path: /watch
+              subPath: stash/transmission/watch

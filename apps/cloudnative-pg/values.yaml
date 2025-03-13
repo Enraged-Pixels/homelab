@@ -1,0 +1,6 @@
+cloudnative-pg:
+  # Default values should work for most cases
+  # Add any customizations as needed
+  metrics:
+    serviceMonitor:
+      enabled: true

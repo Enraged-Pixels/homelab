@@ -6,3 +6,14 @@
     - {name: "fs.inotify.max_queued_events", value: 16384}
     - {name: "fs.inotify.max_user_instances", value: 8192}
     - {name: "fs.inotify.max_user_watches", value: 524288}
+- name: Install NFS client packages
+  ansible.builtin.dnf:
+    name:
+      - nfs-utils
+    state: present
+
+- name: Start and enable rpcbind service
+  ansible.builtin.systemd:
+    name: rpcbind
+    state: started
+    enabled: true

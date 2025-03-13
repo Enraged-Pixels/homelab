@@ -1,0 +1,19 @@
+nfs-subdir-external-provisioner:
+  nfs:
+    server: 192.168.1.24 # Replace with your NFS server IP (I noticed this IP in your bookmarks)
+    path: /mnt/pool/apps # Replace with the actual path to your ZFS pool on the NFS server
+  storageClass:
+    name: zfs-nfs
+    defaultClass: false
+    reclaimPolicy: Retain # Keeps data when PVC is deleted
+    allowVolumeExpansion: true
+    mountOptions:
+      - nfsvers=4.1
+      - noatime
+  resources:
+    limits:
+      cpu: 200m
+      memory: 128Mi
+    requests:
+      cpu: 100m
+      memory: 64Mi

@@ -29,7 +29,6 @@ post-install:
 # TODO maybe there's a better way to manage backup with GitOps?
 backup:
 	./scripts/backup --action setup --namespace=actualbudget --pvc=actualbudget-data
-	./scripts/backup --action setup --namespace=jellyfin --pvc=jellyfin-data
 	./scripts/backup --action setup --namespace=gitea --pvc=gitea-shared-storage
 	./scripts/backup --action setup --namespace=kanidm --pvc=data-kanidm-0
 	./scripts/backup --action setup --namespace=matrix --pvc=data-matrix-postgresql-0
@@ -43,7 +42,6 @@ backup:
 
 restore:
 	./scripts/backup --action restore --namespace=actualbudget --pvc=actualbudget-data
-	./scripts/backup --action restore --namespace=jellyfin --pvc=jellyfin-data
 	./scripts/backup --action restore --namespace=gitea --pvc=gitea-shared-storage
 	./scripts/backup --action restore --namespace=kanidm --pvc=data-kanidm-0
 	./scripts/backup --action restore --namespace=matrix --pvc=data-matrix-postgresql-0

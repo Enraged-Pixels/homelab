@@ -37,10 +37,3 @@
     - key: PAPERLESS_ADMIN_PASSWORD
       length: 32
       special: true
-
-# Immich
-- name: immich-secret
-  data:
-    - key: POSTGRES_PASSWORD
-      length: 32
-      sepcial: false

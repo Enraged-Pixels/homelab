@@ -8,22 +8,30 @@ app-template:
         stash:
           image:
             repository: stashapp/stash
-            tag: latest
+            tag: v0.24.3
           env:
             STASH_STASH: /data
             STASH_GENERATED: /generated
             STASH_METADATA: /metadata
             STASH_CACHE: /cache
             STASH_PORT: 9999
+          ports:
+            - name: stash
+              containerPort: 9999
+              protocol: TCP
         transmission:
           image:
             repository: lscr.io/linuxserver/transmission
-            tag: latest
+            tag: 4.0.5
           env:
             PUID: 1000
             PGID: 1000
             TZ: Europe/Berlin
             TRANSMISSION_WEB_HOME: /combustion-release/
+          ports:
+            - name: transmission
+              containerPort: 9091
+              protocol: TCP
   service:
     main:
       ports:
@@ -64,7 +72,7 @@ app-template:
       enabled: true
       storageClass: zfs-nfs
       accessMode: ReadWriteMany
-      size: 1000Gi
+      size: 50Gi
       advancedMounts:
         main:
           stash:

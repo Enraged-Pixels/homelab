@@ -39,7 +39,7 @@
       special: true
 
 # Immich
-- name: immich.postgres
+- name: immich-secret
   data:
     - key: POSTGRES_PASSWORD
       length: 32

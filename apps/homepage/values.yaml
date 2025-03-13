@@ -89,8 +89,8 @@ app-template:
                 description: Document management system
                 icon: paperless.svg
             - Vaultwarden:
-                href: https://vault.epx.pub
-                description: Free Bitwarden backend
+                href: https://sec.epx.pub
+                description: Secret management system
                 icon: vaultwarden.svg
           - Management:
             - Transmission:

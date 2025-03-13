@@ -110,7 +110,9 @@ app-template:
             - *jellyseerrHost
   persistence:
     data:
-      accessMode: ReadWriteOnce
+      enabled: true
+      storageClass: zfs-nfs
+      accessMode: ReadWriteMany
       size: 50Gi
       advancedMounts:
         main:

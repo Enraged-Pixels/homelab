@@ -33,7 +33,6 @@ app-template:
   persistence:
     data:
       enabled: true
-      type: pvc
       accessMode: ReadWriteOnce
       size: 1Gi
       globalMounts:

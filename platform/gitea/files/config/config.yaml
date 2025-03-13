@@ -4,3 +4,17 @@
 #     fullName: Renovate
 #     email: info+1@epx.pub
 #     tokenSecretRef: renovate-secret
+organizations:
+  - name: ops
+    description: Operations
+    teams:
+      - name: Owners
+        members:
+          - renovate
+repositories:
+  - name: homelab
+    owner: ops
+    private: false
+    migrate:
+      source: https://github.com/Enraged-Pixels/homelab
+      mirror: false

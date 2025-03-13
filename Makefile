@@ -30,6 +30,12 @@ post-install:
 backup:
 	./scripts/backup --action setup --namespace=actualbudget --pvc=actualbudget-data
 	./scripts/backup --action setup --namespace=gitea --pvc=gitea-shared-storage
+	./scripts/backup --action setup --namespace=gitea --pvc=data-gitea-postgresql-ha-postgresql-0
+	./scripts/backup --action setup --namespace=gitea --pvc=data-gitea-postgresql-ha-postgresql-1
+	./scripts/backup --action setup --namespace=gitea --pvc=data-gitea-postgresql-ha-postgresql-2
+	./scripts/backup --action setup --namespace=gitea --pvc=redis-data-gitea-redis-cluster-0
+	./scripts/backup --action setup --namespace=gitea --pvc=redis-data-gitea-redis-cluster-1
+	./scripts/backup --action setup --namespace=gitea --pvc=redis-data-gitea-redis-cluster-2
 	./scripts/backup --action setup --namespace=kanidm --pvc=data-kanidm-0
 	./scripts/backup --action setup --namespace=matrix --pvc=data-matrix-postgresql-0
 	./scripts/backup --action setup --namespace=matrix --pvc=matrix-dendrite-jetstream-pvc
@@ -43,6 +49,12 @@ backup:
 restore:
 	./scripts/backup --action restore --namespace=actualbudget --pvc=actualbudget-data
 	./scripts/backup --action restore --namespace=gitea --pvc=gitea-shared-storage
+	./scripts/backup --action restore --namespace=gitea --pvc=data-gitea-postgresql-ha-postgresql-0
+	./scripts/backup --action restore --namespace=gitea --pvc=data-gitea-postgresql-ha-postgresql-1
+	./scripts/backup --action restore --namespace=gitea --pvc=data-gitea-postgresql-ha-postgresql-2
+	./scripts/backup --action restore --namespace=gitea --pvc=redis-data-gitea-redis-cluster-0
+	./scripts/backup --action restore --namespace=gitea --pvc=redis-data-gitea-redis-cluster-1
+	./scripts/backup --action restore --namespace=gitea --pvc=redis-data-gitea-redis-cluster-2
 	./scripts/backup --action restore --namespace=kanidm --pvc=data-kanidm-0
 	./scripts/backup --action restore --namespace=matrix --pvc=data-matrix-postgresql-0
 	./scripts/backup --action restore --namespace=matrix --pvc=matrix-dendrite-jetstream-pvc

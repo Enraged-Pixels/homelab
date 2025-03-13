@@ -21,13 +21,20 @@ metal:
             disk: sda,
             network_interface: eth0,
           }
-        tower-master1:
+        laptop-master3:
           {
-            ansible_host: 192.168.1.62,
-            mac: "00:15:5d:01:36:00",
+            ansible_host: 192.168.1.55,
+            mac: "00:15:5d:b2:15:11",
             disk: sda,
             network_interface: eth0,
           }
+        #tower-master1:
+        #{
+        #  ansible_host: 192.168.1.76,
+        #  mac: "00:15:5d:01:36:01",
+        #  disk: sda,
+        #  network_interface: eth0,
+        #}
         # lowerblade-master1:
         #   {
         #     ansible_host: 192.168.1.73,
@@ -35,6 +42,7 @@ metal:
         #     disk: vda,
         #     network_interface: net0,
         #   }
+
     workers:
       hosts:
         laptop-worker1:

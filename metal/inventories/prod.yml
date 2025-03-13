@@ -35,6 +35,13 @@ metal:
             disk: sda,
             network_interface: eth0,
           }
+        tower-master2:
+          {
+            ansible_host: 192.168.1.78,
+            mac: "00:15:5d:01:36:02",
+            disk: sda,
+            network_interface: eth0,
+          }
         # lowerblade-master1:
         #   {
         #     ansible_host: 192.168.1.73,

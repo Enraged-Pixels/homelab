@@ -8,8 +8,8 @@ nfs-subdir-external-provisioner:
     reclaimPolicy: Retain # Keeps data when PVC is deleted
     allowVolumeExpansion: true
     mountOptions:
-      - nfsvers=4.1
-      - noatime
+      - nfsvers=3
+      - proto=tcp
   resources:
     limits:
       cpu: 200m

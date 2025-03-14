@@ -4,8 +4,8 @@ app-template:
       containers:
         main:
           image:
-            repository: ghcr.io/spliit-app/spliit
-            tag: 1.15.0
+            repository: registry.epx.pub/spliit
+            tag: 1.0.0
           env:
             # For authentication with the Spliit service
             AUTH_SECRET:

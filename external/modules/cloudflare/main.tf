@@ -2,14 +2,14 @@ data "cloudflare_zone" "zone" {
   name = "epx.pub"
 }
 
-data "cloudflare_api_token_permissions_groups" "all" {}
+data "cloudflare_api_token_permission_groups" "all" {}
 
 resource "random_password" "tunnel_secret" {
   length  = 64
   special = false
 }
 
-resource "cloudflare_argo_tunnel" "homelab" {
+resource "cloudflare_tunnel" "homelab" {
   account_id = var.cloudflare_account_id
   name       = "homelab"
   secret     = base64encode(random_password.tunnel_secret.result)
@@ -48,10 +48,10 @@ resource "kubernetes_secret" "cloudflared_credentials" {
 resource "cloudflare_api_token" "external_dns" {
   name = "homelab_external_dns"
 
-  policies {
+  policy {
     permission_groups = [
-      data.cloudflare_api_token_permissions_groups.all.zone["Zone Read"],
-      data.cloudflare_api_token_permissions_groups.all.zone["DNS Write"]
+      data.cloudflare_api_token_permission_groups.all.zone["Zone Read"],
+      data.cloudflare_api_token_permission_groups.all.zone["DNS Write"]
     ]
     resources = {
       "com.cloudflare.api.account.zone.*" = "*"
@@ -77,10 +77,10 @@ resource "kubernetes_secret" "external_dns_token" {
 resource "cloudflare_api_token" "cert_manager" {
   name = "homelab_cert_manager"
 
-  policies {
+  policy {
     permission_groups = [
-      data.cloudflare_api_token_permissions_groups.all.zone["Zone Read"],
-      data.cloudflare_api_token_permissions_groups.all.zone["DNS Write"]
+      data.cloudflare_api_token_permission_groups.all.zone["Zone Read"],
+      data.cloudflare_api_token_permission_groups.all.zone["DNS Write"]
     ]
     resources = {
       "com.cloudflare.api.account.zone.*" = "*"

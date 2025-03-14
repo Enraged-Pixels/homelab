@@ -1,23 +1,12 @@
 renovate:
   cronjob:
     schedule: "0 9 * * *" # Everyday at 09:00
-  env:
-    - name: RENOVATE_GITHUB_TOKEN
-      valueFrom:
-        secretKeyRef:
-          name: renovate-secret-gitea
-          key: GITHUB_COM_TOKEN
   renovate:
     config: |
       {
         "platform": "gitea",
         "endpoint": "https://git.epx.pub/api/v1",
         "gitAuthor": "EPX Renovate <renovate@epx.pub>",
-        "autodiscover": true,
-        "hostRules": [
-                  {
-                    "hostType": "github",
-                    "matchHost": "github.com"
-                  }
+        "autodiscover": true
       }
   existingSecret: renovate-secret-gitea

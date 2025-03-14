@@ -44,3 +44,18 @@
     - key: token
       length: 64
       special: true
+
+# Spliit
+- name: spliit.auth
+  data:
+    - key: auth_secret
+      length: 64
+      special: false
+    - key: cookie_secret
+      length: 64
+      special: false
+- name: spliit.database
+  data:
+    - key: password
+      length: 32
+      special: true

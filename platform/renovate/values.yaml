@@ -9,4 +9,4 @@ renovate:
         "gitAuthor": "EPX Renovate",
         "autodiscover": true
       }
-  existingSecret: renovate_secret_gitea
+  existingSecret: renovate-secret-gitea

@@ -186,3 +186,9 @@ app-template:
             - TrueNAS (future UpperBlade Office):
               - href: https://192.168.1.23:444
                 icon: truenas-scale.svg
+            - Leo HdmiMatrix:
+              - href: http://192.168.1.33
+                icon: ubuntu-linux.svg
+            - Leo UsbMatrix:
+              - href: http://192.168.1.101
+                icon: ubuntu-linux.svg

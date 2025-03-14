@@ -7,6 +7,12 @@ renovate:
         "platform": "gitea",
         "endpoint": "https://git.epx.pub/api/v1",
         "gitAuthor": "EPX Renovate <renovate@epx.pub>",
-        "autodiscover": true
+        "autodiscover": true,
+        "hostRules": [
+                  {
+                    "hostType": "github",
+                    "matchHost": "github.com",
+                    "token": "${GITHUB_COM_TOKEN}"
+                  }
       }
   existingSecret: renovate-secret-gitea

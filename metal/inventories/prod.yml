@@ -44,7 +44,7 @@ metal:
           }
         pi-master1:
           {
-            ansible_host: 192.168.1.83,
+            ansible_host: 192.168.1.56,
             mac: "b8:27:eb:24:68:3e",
             disk: sda,
             network_interface: eth0,

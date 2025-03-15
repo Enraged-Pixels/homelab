@@ -149,10 +149,10 @@ app-template:
               - href: https://homelab.epx.pub
                 icon: google-docs.svg
             - NordWest homelab repository:
-              - href: https://git.epx.pub/NordWest/homelab/
+              - href: https://git.epx.pub/ops/homelab/
                 icon: gitea.svg
             - Public homelab repository:
-              - href: https://github.com/khuedoan/homelab
+              - href: https://github.com/Enraged-Pixels/homelab
                 icon: github.svg
           - Managed services:
             - Cloudflare:

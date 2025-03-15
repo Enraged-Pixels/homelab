@@ -148,7 +148,7 @@ app-template:
             - Documentation (broken):
               - href: https://homelab.epx.pub
                 icon: google-docs.svg
-            - NordWest homelab repository:
+            - Private homelab repository:
               - href: https://git.epx.pub/ops/homelab/
                 icon: gitea.svg
             - Public homelab repository:
